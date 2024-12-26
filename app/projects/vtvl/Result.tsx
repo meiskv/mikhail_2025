@@ -27,34 +27,38 @@ export default function Result() {
           </p>
         </div>
       </div>
-      <div className="flex flex-row gap-10 pt-20">
-        <div className="gap-8">
-          <div className="text-center">
-            <h1 className="text-8xl leading-tight font-semibold">83%</h1>
-            <p>Reduction in Administrative Time</p>
-          </div>
-          <div className="text-center">
-            <h1 className="text-8xl leading-tight font-semibold">83%</h1>
-            <p>Increase in Security Compliance</p>
-          </div>
-        </div>
-        <div className="gap-8">
-          <div className="text-center">
-            <h1 className="text-8xl leading-tight font-semibold">70%</h1>
-            <p>Faster Token Distribution</p>
-          </div>
-          <div className="text-center">
-            <h1 className="text-8xl leading-tight font-semibold">95%</h1>
-            <p>Reduction in Operational Errors</p>
-          </div>
-        </div>
-        <div className="gap-8">
-          <div className="text-center">
-            <h1 className="text-8xl leading-tight font-semibold">80%</h1>
-            <p>Improvement in Stakeholder Transparency</p>
-          </div>
-        </div>
-      </div>
+      <ul className="grid grid-cols-1 md:grid-cols-2 gap-8 pt-20">
+        <li className="md:text-center text-left">
+          <h1 className="md:text-6xl text-5xl leading-tight font-semibold">
+            83%
+          </h1>
+          <p>Reduction in Administrative Time</p>
+        </li>
+        <li className="md:text-center text-left">
+          <h1 className="md:text-6xl text-5xl leading-tight font-semibold">
+            83%
+          </h1>
+          <p>Increase in Security Compliance</p>
+        </li>
+        <li className="md:text-center text-left">
+          <h1 className="md:text-6xl text-5xl leading-tight font-semibold">
+            70%
+          </h1>
+          <p>Faster Token Distribution</p>
+        </li>
+        <li className="md:text-center text-left">
+          <h1 className="md:text-6xl text-5xl leading-tight font-semibold">
+            95%
+          </h1>
+          <p>Reduction in Operational Errors</p>
+        </li>
+        <li className="md:text-center text-left">
+          <h1 className="md:text-6xl text-5xl leading-tight font-semibold">
+            80%
+          </h1>
+          <p>Improvement in Stakeholder Transparency</p>
+        </li>
+      </ul>
     </section>
   );
 }

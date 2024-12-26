@@ -1,4 +1,3 @@
-import Image from 'next/image';
 import Link from 'next/link';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import Separator from '@/components/mv_components/Separator';
@@ -8,7 +7,6 @@ import VAI from '@/components/featured_projects/VAI';
 import PayFuture from '@/components/featured_projects/PayFuture';
 import Experiences from '@/components/my_experience/Experiences';
 import ExperienceHeader from '@/components/my_experience/ExperienceHeader';
-import PortfolioGridOverlay from '@/components/mv_components/PortfolioGridLayout';
 import Navigation from '@/components/mv_components/Navigation';
 
 export default function Home() {
