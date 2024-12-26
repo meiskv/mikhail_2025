@@ -9,35 +9,13 @@ import PayFuture from '@/components/featured_projects/PayFuture';
 import Experiences from '@/components/my_experience/Experiences';
 import ExperienceHeader from '@/components/my_experience/ExperienceHeader';
 import PortfolioGridOverlay from '@/components/mv_components/PortfolioGridLayout';
+import Navigation from '@/components/mv_components/Navigation';
 
 export default function Home() {
   return (
     <div className="relative m-6">
       <main className="">
-        <div className="flex justify-between border-b border-black pb-3">
-          <div className="text-xl">MV</div>
-          <ul className="flex flex-row w-full justify-end gap-4">
-            <li>
-              <Link href="#">Work</Link>
-            </li>
-            <li>
-              <Link
-                className="border-black border px-3 py-2 rounded-xl"
-                href="#"
-              >
-                Resume
-              </Link>
-            </li>
-            <li>
-              <Link className="border-l border-r border-black px-4" href="#">
-                in
-              </Link>
-            </li>
-            <li>
-              <Link href="#">Hire me</Link>
-            </li>
-          </ul>
-        </div>
+        <Navigation />
         <div className="pt-12">
           <h1 className="uppercase md:text-7xl text-6xl font-semibold">
             Digital Product Designer
@@ -287,7 +265,7 @@ export default function Home() {
           CRAFTED by <b className="font-semibold">Mikhail Villamor</b>
         </div>
       </footer>
-      <PortfolioGridOverlay />
+      {/* <PortfolioGridOverlay /> */}
     </div>
   );
 }

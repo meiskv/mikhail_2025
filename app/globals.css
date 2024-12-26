@@ -43,6 +43,7 @@ body {
     --chart-4: 43 74% 66%;
     --chart-5: 27 87% 67%;
     --radius: 0.5rem;
+    --header-height: 336px;
   }
   .dark {
     --background: 222.2 84% 4.9%;
@@ -78,5 +79,247 @@ body {
   }
   body {
     @apply bg-background text-foreground;
+  }
+}
+
+.draggable-section {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: calc(100vh - var(--header-height, 0px));
+  &:hover {
+    cursor: grab;
+  }
+}
+
+.drag-container {
+  display: flex;
+  position: absolute;
+  top: 0;
+  left: 0;
+  gap: 1rem;
+  padding: 1rem 0 1rem 1rem;
+  height: 100%;
+  width: fit-content;
+  will-change: transform;
+  transform: translate3d(0, 0, 0);
+  box-sizing: border-box;
+  user-select: text;
+}
+
+.drag-item {
+  transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  width: 100%;
+}
+
+.dragging .drag-item {
+  transform: scale(0.98);
+  transition: transform 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+/* Floating Navigation Starts */
+.floating-navigation {
+  position: fixed;
+  bottom: 24px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2000;
+  padding: 8px;
+  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.764);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.764);
+}
+
+.nav-button {
+  position: relative;
+  background-color: #0a0a0a;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  cursor: pointer;
+  text-align: center;
+  font-size: 1rem;
+  overflow: hidden;
+  border-radius: 6px;
+  width: 32px; /* Initially just the width of the first letter */
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.5s ease,
+    width 0.7s cubic-bezier(0.25, 0.1, 0.25, 1),
+    /* Smooth easing for width */ padding 0.7s cubic-bezier(0.25, 0.1, 0.25, 1); /* Same easing for padding */
+}
+
+.nav-button span {
+  white-space: nowrap;
+  position: absolute;
+  transition: opacity 0.5s ease, transform 0.5s ease; /* Adjust timing for smoothness */
+}
+
+.nav-button span.full-text {
+  opacity: 0;
+  position: static; /* Allow it to contribute to width dynamically */
+  transform: scale(0.8);
+}
+
+.nav-button:hover {
+  width: auto; /* Dynamically expand to fit text */
+  background-color: #fff;
+  padding: 8px 16px; /* Add padding for spacing */
+  color: #0a0a0a;
+  border: 1px solid #0a0a0a;
+}
+
+.nav-button:hover span.full-text {
+  opacity: 1; /* Gradually fade in */
+  transform: scale(1); /* Smooth scaling */
+}
+
+.nav-button span.initial {
+  opacity: 1; /* Gradually fade out */
+}
+
+.nav-button:hover span.initial {
+  opacity: 0;
+}
+/* Floating Navigation Ends */
+
+.custom-cursor {
+  position: fixed;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  z-index: -3000;
+  opacity: 0;
+  transform: translate(-50%, -50%);
+  transition: opacity 0.3s ease;
+}
+
+.cursor-svg {
+  width: 80px;
+  height: 80px;
+  animation: rotate-svg 5s linear infinite; /* Infinite rotation */
+}
+
+@keyframes rotate-svg {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Mobile styles (default) */
+.mobile-view {
+  position: relative !important;
+  width: 100% !important;
+  height: auto !important;
+  overflow-x: hidden !important;
+  overflow-y: auto !important;
+  touch-action: auto !important;
+  transform: none !important;
+  -webkit-overflow-scrolling: touch !important; /* For iOS smooth scrolling */
+}
+
+.mobile-container {
+  position: relative !important;
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 1rem !important;
+  padding: 0rem !important;
+  height: auto !important;
+  width: 100% !important;
+  transform: none !important;
+  left: 0 !important;
+  top: 0 !important;
+}
+
+/* Prevent any horizontal scrolling on mobile */
+@media (max-width: 767px) {
+  body {
+    overflow-x: hidden;
+  }
+
+  .drag-item {
+    width: 100% !important;
+    min-width: 0 !important;
+    margin: 0; /* Reset any margins on mobile */
+  }
+
+  .floating-navigation {
+    display: none;
+  }
+
+  /* Target specific content inside drag items */
+  .drag-item > div,
+  .drag-item > section {
+    min-width: 0 !important;
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+
+  /* Specifically target any fixed-width elements */
+  .drag-item [class*='min-w-'],
+  .drag-item [class*='max-w-'] {
+    min-width: 0 !important;
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+}
+
+/* Desktop styles */
+@media (min-width: 768px) {
+  .draggable-section {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: calc(100vh - var(--header-height, 0px));
+    cursor: grab;
+    touch-action: none;
+  }
+
+  .drag-container {
+    display: flex;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 1rem 0; /* Remove left padding as we'll handle spacing differently */
+    height: 100%;
+    width: fit-content;
+    user-select: none;
+    will-change: transform;
+    transform: translate3d(0, 0, 0);
+    box-sizing: border-box;
+  }
+
+  /* Add spacing between drag items */
+  .drag-item {
+    margin: 0 6rem; /* Adjust this value to control spacing */
+  }
+
+  /* Remove margin from first and last items */
+  .drag-item:first-child {
+    margin-left: 1rem; /* Keep some padding from container edge */
+  }
+
+  .drag-item:last-child {
+    margin-right: 1rem; /* Keep some padding from container edge */
+  }
+}
+
+/* Update drag-item styles for mobile */
+.drag-item {
+  /* border-radius: 10px; */
+  transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  width: 100%; /* Full width on mobile */
+}
+
+@media (min-width: 768px) {
+  .drag-item {
+    width: auto; /* Reset width for desktop */
   }
 }

@@ -59,5 +59,9 @@ export default {
       },
     },
   },
-  plugins: [require('tailwindcss-animate'), scrollbarHide],
+  plugins: [
+    require('tailwindcss-animate'),
+    require('@tailwindcss/aspect-ratio'), // Add the aspect-ratio plugin
+    scrollbarHide,
+  ],
 } satisfies Config;
