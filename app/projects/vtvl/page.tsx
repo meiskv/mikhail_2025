@@ -24,6 +24,7 @@ export default function VTVL() {
   const [isMobile, setIsMobile] = useState(true);
   const [isLoading, setIsLoading] = useState(true);
   const draggableInstance = useRef<Draggable | null>(null);
+  const [isNavigating, setIsNavigating] = useState(false);
 
   // Simplified bounds calculation
   const calculateBounds = () => {
@@ -230,22 +231,43 @@ export default function VTVL() {
 
     if (!targetSection) return;
 
+    // Set navigating state to true to trigger zoom out
+    setIsNavigating(true);
+
     if (isMobile) {
       // Smooth scroll for mobile
       targetSection.scrollIntoView({ behavior: 'smooth' });
+      // Reset navigation state after animation
+      setTimeout(() => setIsNavigating(false), 1000);
     } else {
       // Horizontal scroll animation for desktop
       const container = containerRef.current;
       const sectionX = -targetSection.offsetLeft;
-
       const { minX } = calculateBounds();
       const maxScrollX = Math.max(sectionX, minX);
 
-      gsap.to(container, {
-        x: maxScrollX,
-        duration: 1,
-        ease: 'power3.inOut',
-      });
+      // Timeline for zoom out -> scroll -> zoom in sequence
+      const tl = gsap.timeline();
+
+      // Zoom out all drag items
+      tl.to('.drag-item', {
+        scale: 0.95,
+        duration: 0.3,
+        ease: 'power2.out',
+      })
+        // Move to target section
+        .to(container, {
+          x: maxScrollX,
+          duration: 1,
+          ease: 'power3.inOut',
+        })
+        // Zoom back in
+        .to('.drag-item', {
+          scale: 1,
+          duration: 0.3,
+          ease: 'power2.out',
+          onComplete: () => setIsNavigating(false),
+        });
     }
   };
 
@@ -296,7 +318,7 @@ export default function VTVL() {
           ref={containerRef}
           className={`${
             isMobile ? 'mobile-container' : 'drag-container cursor-grab'
-          }`}
+          } ${isNavigating ? 'navigating' : ''}`}
           style={{
             // Force mobile layout
             position: isMobile ? 'relative' : 'absolute',
