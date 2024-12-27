@@ -43,7 +43,7 @@ body {
     --chart-4: 43 74% 66%;
     --chart-5: 27 87% 67%;
     --radius: 0.5rem;
-    --header-height: 336px;
+    --header-height: 350px;
   }
   .dark {
     --background: 222.2 84% 4.9%;
@@ -137,20 +137,29 @@ body {
   background-color: #0a0a0a;
   color: white;
   border: none;
-  padding: 8px 12px;
+  padding: 6px 8px;
   cursor: pointer;
   text-align: center;
-  font-size: 1rem;
+  font-size: 0.875rem;
   overflow: hidden;
   border-radius: 6px;
-  width: 32px; /* Initially just the width of the first letter */
-  height: 32px;
+  width: 28px; /* Smaller on mobile */
+  height: 28px;
   display: flex;
   align-items: center;
   justify-content: center;
   transition: background-color 0.5s ease,
     width 0.7s cubic-bezier(0.25, 0.1, 0.25, 1),
-    /* Smooth easing for width */ padding 0.7s cubic-bezier(0.25, 0.1, 0.25, 1); /* Same easing for padding */
+    padding 0.7s cubic-bezier(0.25, 0.1, 0.25, 1);
+}
+
+@media (min-width: 768px) {
+  .nav-button {
+    padding: 8px 12px;
+    font-size: 1rem;
+    width: 32px;
+    height: 32px;
+  }
 }
 
 .nav-button span {
@@ -250,10 +259,6 @@ body {
     margin: 0; /* Reset any margins on mobile */
   }
 
-  .floating-navigation {
-    display: none;
-  }
-
   /* Target specific content inside drag items */
   .drag-item > div,
   .drag-item > section {
@@ -303,7 +308,7 @@ body {
 
   /* Remove margin from first and last items */
   .drag-item:first-child {
-    margin-left: 1rem; /* Keep some padding from container edge */
+    margin-left: 0; /* Keep some padding from container edge */
   }
 
   .drag-item:last-child {

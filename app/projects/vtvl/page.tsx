@@ -256,26 +256,26 @@ export default function VTVL() {
 
   return (
     <div className="relative">
-      <main className="p-6">
-        <Navigation />
+      <Navigation />
+      <main className="p-4 md:p-6">
         <div className="flex flex-col">
-          <h1 className="uppercase md:text-7xl text-6xl font-semibold py-6">
+          <h1 className="uppercase md:text-7xl text-6xl font-semibold pb-3">
             VTVL
           </h1>
-          <ul className="text-lg font-base md:grid grid-cols-12 gap-4 py-0 items-center">
-            <li className="col-span-2 flex flex-row md:flex-col justify-between">
+          <ul className="text-sm md:text-lg font-base md:flex grid-cols-12 gap-4 py-0 items-center justify-between">
+            <li className="flex flex-row md:flex-col justify-between">
               <div className="text-[#757575]">Role</div>
               <div>Senior Product Designer</div>
             </li>
-            <li className="col-span-2 flex flex-row md:flex-col justify-between">
+            <li className="flex flex-row md:flex-col justify-between">
               <div className="text-[#757575]">City</div>
               <div>Singapore</div>
             </li>
-            <li className="col-span-2 flex flex-row md:flex-col justify-between">
+            <li className="flex flex-row md:flex-col justify-between">
               <div className="text-[#757575]">Year</div>
               <div>2022-2024</div>
             </li>
-            <li className="col-span-2 flex flex-row md:flex-col justify-between">
+            <li className="flex flex-row md:flex-col justify-between">
               <div className="text-[#757575]">Industry</div>
               <div>Blockchain, Crypto, Web3</div>
             </li>
@@ -314,7 +314,7 @@ export default function VTVL() {
         </div>
         {/* Updated floating navigation */}
         <div className="floating-navigation flex flex-col">
-          <div className="flex gap-2">
+          <div className="flex gap-1 md:gap-2">
             {['Intro', 'Branding', 'Product Design', 'Digital', 'Outro'].map(
               (label) => (
                 <button

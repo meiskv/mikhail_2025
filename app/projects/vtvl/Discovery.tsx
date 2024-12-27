@@ -7,7 +7,7 @@ export default function Discovery() {
       className="drag-item md:p-6 md:rounded-lg min-w-fit space-y-8 md:border-0 border-b border-black px-4 py-8 rounded-none"
       data-nav=""
     >
-      <div className="flex flex-col justify-start md:pr-12 min-w-[526px] max-w-[526px] gap-6">
+      <div className="flex flex-col justify-start min-w-[526px] max-w-[526px] gap-6">
         <div className="flex items-center space-x-2">
           <h4 className="text-base">III. DISCOVERY</h4>
           <Image
@@ -27,9 +27,9 @@ export default function Discovery() {
         </p>
       </div>
       <div className="flex justify-around md:flex-row flex-col gap-10 md:pt-12">
-        <div className="flex md:flex-row flex-col md:justify-center md:items-center items-start gap-8">
+        <div className="flex flex-col md:justify-center md:items-center items-start gap-8">
           <div className="md:text-center">
-            <h1 className="md:text-8xl text-6xl leading-tight font-semibold">
+            <h1 className="md:text-6xl text-6xl leading-tight font-semibold">
               80%
             </h1>
             <p>Manual Spreadsheets</p>
@@ -41,9 +41,9 @@ export default function Discovery() {
             <li>✦ Non-scalability</li>
           </ul>
         </div>
-        <div className="flex md:flex-row flex-col md:justify-center md:items-center items-start gap-8">
+        <div className="flex flex-col md:justify-center md:items-center items-start gap-8">
           <div className="md:text-center">
-            <h1 className="md:text-8xl text-6xl leading-tight font-semibold">
+            <h1 className="md:text-6xl text-6xl leading-tight font-semibold">
               20%
             </h1>
             <p>Internal Solutions</p>

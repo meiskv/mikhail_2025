@@ -4,10 +4,10 @@ export default function Goal() {
   return (
     <section
       // className="drag-item flex flex-col md:flex-row md:p-6 rounded-lg min-w-fit"
-      className="drag-item flex flex-col md:flex-row md:p-6 md:rounded-lg min-w-fit space-y-8 md:border-0 border-b border-black px-4 py-8 rounded-none"
+      className="drag-item flex flex-col md:flex-row md:p-6 md:rounded-lg min-w-fit space-y-8 md:border-0 border-b border-black px-4 py-8 rounded-none gap-14"
       data-nav=""
     >
-      <div className="flex flex-col justify-end md:pr-40 min-w-[526px] max-w-[526px] gap-6">
+      <div className="flex flex-col justify-end min-w-[526px] max-w-[526px] gap-6">
         <div className="flex items-center space-x-2">
           <h4 className="text-base">II. GOAL</h4>
           <Image
