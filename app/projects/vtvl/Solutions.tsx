@@ -11,37 +11,37 @@ const solutionsData = {
   '2': {
     number: '02',
     title: 'Streamlining Token Vesting for Web3 Projects',
-    imageSrc: '/projects/vtvl/sol_01.png',
+    imageSrc: '/projects/vtvl/sol_02.svg',
     caseStudyLink: '/case-studies/vtvl/token-minting',
   },
   '3': {
     number: '03',
     title: 'Streamlining the Claims Process for Token Recipients',
-    imageSrc: '/projects/vtvl/sol_01.png',
+    imageSrc: '/projects/vtvl/sol_03.svg',
     caseStudyLink: '/case-studies/vtvl/token-minting',
   },
   '4': {
     number: '04',
     title: 'Enhancing Withdrawn Token Visualization and Monitoring',
-    imageSrc: '/projects/vtvl/sol_01.png',
+    imageSrc: '/projects/vtvl/sol_04.svg',
     caseStudyLink: '/case-studies/vtvl/token-minting',
   },
   '5': {
     number: '05',
     title: 'Visualizing Key Metrics with Real-Time Charts',
-    imageSrc: '/projects/vtvl/sol_01.png',
+    imageSrc: '/projects/vtvl/sol_05.svg',
     caseStudyLink: '/case-studies/vtvl/token-minting',
   },
   '6': {
     number: '06',
     title: 'Streamlining the Claims Process for Token Recipients',
-    imageSrc: '/projects/vtvl/sol_01.png',
+    imageSrc: '/projects/vtvl/sol_06.svg',
     caseStudyLink: '/case-studies/vtvl/token-minting',
   },
   '7': {
     number: '07',
     title: 'Streamlining the Claims Process for Token Recipients',
-    imageSrc: '/projects/vtvl/sol_01.png',
+    imageSrc: '/projects/vtvl/sol_07.svg',
     caseStudyLink: '/case-studies/vtvl/token-minting',
   },
 };
