@@ -29,7 +29,7 @@ export default function Goal() {
       </div>
       <div className="relative w-full aspect-[1/1]">
         <Image
-          src="/projects/vtvl/ii_goal.png"
+          src="/projects/vtvl/ii_goal.svg"
           alt="Title arrow"
           fill
           className="object-cover rounded-lg"

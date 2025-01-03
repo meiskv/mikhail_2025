@@ -44,6 +44,7 @@ body {
     --chart-5: 27 87% 67%;
     --radius: 0.5rem;
     --header-height: 350px;
+    --draggable-height: calc(100vh - var(--header-height));
   }
   .dark {
     --background: 222.2 84% 4.9%;
@@ -120,9 +121,9 @@ body {
 /* Floating Navigation Starts */
 .floating-navigation {
   position: fixed;
-  bottom: 24px;
-  left: 50%;
-  transform: translateX(-50%);
+  bottom: 7rem;
+  left: 1rem;
+  /* transform: translateX(-50%); */
   z-index: 2000;
   padding: 8px;
   border-radius: 6px;
@@ -276,13 +277,26 @@ body {
   }
 }
 
+.case-footer {
+  height: 100%;
+}
+
 /* Desktop styles */
 @media (min-width: 768px) {
+  .case-footer {
+    /* Add 101px to account for border and ensure proper height alignment */
+    height: calc(
+      100vh - var(--draggable-height) - var(--header-height) + 101px
+    );
+    position: relative;
+    z-index: 1;
+  }
+
   .draggable-section {
     position: relative;
     overflow: hidden;
     width: 100%;
-    height: calc(100vh - var(--header-height, 0px));
+    height: var(--draggable-height);
     cursor: grab;
     touch-action: none;
   }

@@ -5,7 +5,7 @@ const solutionsData = {
   '1': {
     number: '01',
     title: 'Simplifying Token Minting and Import Process',
-    imageSrc: '/projects/vtvl/sol_01.png',
+    imageSrc: '/projects/vtvl/sol_01.svg',
     caseStudyLink: '/case-studies/vtvl/token-minting',
   },
   '2': {

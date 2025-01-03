@@ -12,6 +12,7 @@ import TakeAways from './TakeAways';
 import Goal from './Goal';
 import Challenges from './Challenges';
 import Overview from './Overview';
+import BrandingIntroduction from './Branding-Intro';
 
 export default function VTVL() {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -325,14 +326,16 @@ export default function VTVL() {
             transform: isMobile ? 'none' : undefined,
           }}
         >
+          {/* Product Case Study */}
           <Overview />
-
           <Challenges />
           <Goal />
           <Discovery />
           <Solutions />
           <Result />
           <TakeAways />
+          {/* Branding */}
+          <BrandingIntroduction />
         </div>
         {/* Updated floating navigation */}
         <div className="floating-navigation flex flex-col">
@@ -366,6 +369,17 @@ export default function VTVL() {
             />
           </div>
         )}
+      </div>
+      <div className="case-footer flex items-center text-black justify-between px-4 bg-white">
+        <div className="text-sm">
+          Available worldwide
+          <span className="block">Currently, based in Melbourne</span>
+        </div>
+        <div className="text-center">
+          → Next Project ←
+          <span className="block font-bold">LYOPAY Ecosystem</span>
+        </div>
+        <div className="uppercase text-sm">last update on September 2024</div>
       </div>
     </div>
   );
