@@ -20,6 +20,9 @@ import BrandingColor from './Branding-Color';
 import BrandingTypography from './Branding-Typography';
 import BrandingIconography from './Branding-Iconography';
 import BrandingSocialMedia from './Branding-SocialMedia';
+import BrandingMerch from './Branding-Merch';
+import BrandingVideos from './Branding-Videos';
+import BrandingResult from './Branding-Result';
 
 export default function VTVL() {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -159,12 +162,12 @@ export default function VTVL() {
         const velocity = velocityRef.current;
         if (Math.abs(velocity) > 10) {
           const bounds = calculateBounds();
-          const momentum = velocity * 0.5; // Adjust this multiplier to control inertia strength
+          const momentum = velocity * 0.5;
           let targetX =
             (gsap.getProperty(containerRef.current, 'x') as number) + momentum;
 
           // Constrain to bounds
-          targetX = Math.max(bounds.minX, Math.min(bounds.maxX, targetX));
+          targetX = Math.max(bounds.minX, targetX);
 
           gsap.to(containerRef.current, {
             x: targetX,
@@ -350,24 +353,32 @@ export default function VTVL() {
           <BrandingTypography />
           <BrandingIconography />
           <BrandingSocialMedia />
+          <BrandingMerch />
+          <BrandingVideos />
+          <BrandingResult />
         </div>
         {/* Updated floating navigation */}
         <div className="floating-navigation flex flex-col">
           <div className="flex gap-1 md:gap-2">
-            {['Intro', 'Branding', 'Product Design', 'Digital', 'Outro'].map(
-              (label) => (
-                <button
-                  key={label}
-                  className="nav-button"
-                  onClick={() => navigateToSection(label)}
-                >
-                  <span className="initial mix-blend-difference">
-                    {label.charAt(0)}
-                  </span>
-                  <span className="full-text">{label}</span>
-                </button>
-              )
-            )}
+            {[
+              'Intro',
+              'Branding',
+              'Product Design',
+              'Digital',
+              'Outro',
+              'Result',
+            ].map((label) => (
+              <button
+                key={label}
+                className="nav-button"
+                onClick={() => navigateToSection(label)}
+              >
+                <span className="initial mix-blend-difference">
+                  {label.charAt(0)}
+                </span>
+                <span className="full-text">{label}</span>
+              </button>
+            ))}
           </div>
         </div>
 
