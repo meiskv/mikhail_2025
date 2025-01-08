@@ -13,6 +13,13 @@ import Goal from './Goal';
 import Challenges from './Challenges';
 import Overview from './Overview';
 import BrandingIntroduction from './Branding-Intro';
+import BrandingChallenges from './Branding-Challenges';
+import BrandingDirection from './Branding-Direction';
+import BrandingLogo from './Branding-Logo';
+import BrandingColor from './Branding-Color';
+import BrandingTypography from './Branding-Typography';
+import BrandingIconography from './Branding-Iconography';
+import BrandingSocialMedia from './Branding-SocialMedia';
 
 export default function VTVL() {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -336,6 +343,13 @@ export default function VTVL() {
           <TakeAways />
           {/* Branding */}
           <BrandingIntroduction />
+          <BrandingChallenges />
+          <BrandingDirection />
+          <BrandingLogo />
+          <BrandingColor />
+          <BrandingTypography />
+          <BrandingIconography />
+          <BrandingSocialMedia />
         </div>
         {/* Updated floating navigation */}
         <div className="floating-navigation flex flex-col">

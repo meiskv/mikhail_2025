@@ -10,7 +10,9 @@ export default function Challenges() {
       <div className="flex flex-col min-w-[526px] max-w-[526px] gap-6">
         <div className="flex flex-col gap-4">
           <div className="flex items-center space-x-2">
-            <h4 className="text-base">I. CHALLENGES</h4>
+            <h4 className="text-base uppercase text-[#757575]">
+              I. CHALLENGES
+            </h4>
             <Image
               src="/title_arrow.svg"
               alt="Title arrow"

@@ -55,7 +55,7 @@ export default function Solutions() {
     >
       <div className="flex flex-col justify-end md:pr-12 gap-6">
         <div className="flex items-center space-x-2">
-          <h4 className="text-base">IV. SOLUTIONS</h4>
+          <h4 className="text-base uppercase text-[#757575]">IV. SOLUTIONS</h4>
           <Image
             src="/title_arrow.svg"
             alt="Title arrow"

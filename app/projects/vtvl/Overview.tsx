@@ -8,7 +8,7 @@ export default function Overview() {
     >
       <div className="flex flex-col max-w-[452px] gap-6 md:pl-6 md:pt-6 pl-4 pt-4 pr-4">
         <div className="flex items-center space-x-2">
-          <h4 className="text-base">OVERVIEW</h4>
+          <h4 className="text-base uppercase text-[#757575]">OVERVIEW</h4>
           <Image
             src="/title_arrow.svg"
             alt="Title arrow"
@@ -23,7 +23,7 @@ export default function Overview() {
       </div>
       <div className=" relative w-full aspect-[16/9]">
         <Image
-          src="/projects/vtvl/hero.png"
+          src="/projects/vtvl/hero.svg"
           alt="VTVL Hero"
           fill
           className="object-cover rounded-lg"

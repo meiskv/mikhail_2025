@@ -4,12 +4,12 @@ export default function Discovery() {
   return (
     <section
       //   className="drag-item flex flex-col md:p-6 rounded-lg min-w-fit"
-      className="drag-item md:p-6 md:rounded-lg min-w-fit space-y-8 md:border-0 border-b border-black px-4 py-8 rounded-none"
+      className="drag-item md:p-6 md:rounded-lg min-w-fit space-y-4 md:border-0 border-b border-black px-4 py-8 rounded-none"
       data-nav=""
     >
       <div className="flex flex-col justify-start min-w-[526px] max-w-[526px] gap-6">
         <div className="flex items-center space-x-2">
-          <h4 className="text-base">III. DISCOVERY</h4>
+          <h4 className="text-base uppercase text-[#757575]">III. DISCOVERY</h4>
           <Image
             src="/title_arrow.svg"
             alt="Title arrow"
@@ -26,29 +26,29 @@ export default function Discovery() {
           and uncovered critical pain points.
         </p>
       </div>
-      <div className="flex justify-around md:flex-row flex-col gap-10 md:pt-12">
-        <div className="flex flex-col md:justify-center md:items-center items-start gap-8">
+      <div className="flex justify-around md:flex-row flex-col gap-10">
+        <div className="flex flex-col md:justify-center md:items-center items-start gap-8 md:gap-4">
           <div className="md:text-center">
-            <h1 className="md:text-6xl text-6xl leading-tight font-semibold">
+            <h1 className="md:text-5xl text-6xl leading-tight font-semibold">
               80%
             </h1>
             <p>Manual Spreadsheets</p>
           </div>
-          <ul className="list-none space-y-3 text-base font-normal">
+          <ul className="list-none space-y-2 text-base font-normal">
             <li>✦ Slow and tedious processes</li>
             <li>✦ Lack of transparency</li>
             <li>✦ Error-prone operations</li>
             <li>✦ Non-scalability</li>
           </ul>
         </div>
-        <div className="flex flex-col md:justify-center md:items-center items-start gap-8">
+        <div className="flex flex-col md:justify-center md:items-center items-start gap-8 md:gap-4">
           <div className="md:text-center">
-            <h1 className="md:text-6xl text-6xl leading-tight font-semibold">
+            <h1 className="md:text-5xl text-6xl leading-tight font-semibold">
               20%
             </h1>
             <p>Internal Solutions</p>
           </div>
-          <ul className="list-none space-y-3 text-base font-normal">
+          <ul className="list-none space-y-2 text-base font-normal">
             <li>✦ Take away developer resources</li>
             <li>✦ Incur high auditing costs</li>
             <li>✦ Suffer from poor maintenance</li>

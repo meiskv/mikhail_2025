@@ -9,7 +9,7 @@ export default function Goal() {
     >
       <div className="flex flex-col justify-end min-w-[526px] max-w-[526px] gap-6">
         <div className="flex items-center space-x-2">
-          <h4 className="text-base">II. GOAL</h4>
+          <h4 className="text-base uppercase text-[#757575]">II. GOAL</h4>
           <Image
             src="/title_arrow.svg"
             alt="Title arrow"
