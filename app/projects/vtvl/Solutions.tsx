@@ -6,43 +6,50 @@ const solutionsData = {
     number: '01',
     title: 'Simplifying Token Minting and Import Process',
     imageSrc: '/projects/vtvl/sol_01.svg',
-    caseStudyLink: '/case-studies/vtvl/token-minting',
+    caseStudyLink:
+      'https://mikhailvillamor.webflow.io/vtvl-simplifying-token-minting-and-import-process-by-mikhail-villamor-product-designer',
   },
   '2': {
     number: '02',
     title: 'Streamlining Token Vesting for Web3 Projects',
     imageSrc: '/projects/vtvl/sol_02.svg',
-    caseStudyLink: '/case-studies/vtvl/token-minting',
+    caseStudyLink:
+      'https://mikhailvillamor.webflow.io/vtvl-token-management-solutions-case-study-by-mikhail-villamor-founding-product-designer',
   },
   '3': {
     number: '03',
     title: 'Streamlining the Claims Process for Token Recipients',
     imageSrc: '/projects/vtvl/sol_03.svg',
-    caseStudyLink: '/case-studies/vtvl/token-minting',
+    caseStudyLink:
+      'https://mikhailvillamor.webflow.io/vtvl-streamlining-the-claims-process-for-token-recipients-by-mikhail-villamor-product-designer',
   },
   '4': {
     number: '04',
     title: 'Enhancing Withdrawn Token Visualization and Monitoring',
     imageSrc: '/projects/vtvl/sol_04.svg',
-    caseStudyLink: '/case-studies/vtvl/token-minting',
+    caseStudyLink:
+      'https://mikhailvillamor.webflow.io/vtvl-enhancing-withdrawn-token-visualization-and-monitoring-by-mikhail-villamor-product-designer',
   },
   '5': {
     number: '05',
     title: 'Visualizing Key Metrics with Real-Time Charts',
     imageSrc: '/projects/vtvl/sol_05.svg',
-    caseStudyLink: '/case-studies/vtvl/token-minting',
+    caseStudyLink:
+      'https://mikhailvillamor.webflow.io/vtvl-visualizing-key-metrics-with-real-time-charts-by-mikhail-villamor-product-designer',
   },
   '6': {
     number: '06',
-    title: 'Streamlining the Claims Process for Token Recipients',
+    title: 'Simplifying Task Management with Dynamic Solutions',
     imageSrc: '/projects/vtvl/sol_06.svg',
-    caseStudyLink: '/case-studies/vtvl/token-minting',
+    caseStudyLink:
+      'https://mikhailvillamor.webflow.io/vtvl-simplifying-task-management-with-dynamic-solutions-by-mikhail-villamor-product-designer',
   },
   '7': {
     number: '07',
-    title: 'Streamlining the Claims Process for Token Recipients',
+    title: 'Simplifying Transaction History for Better Clarity',
     imageSrc: '/projects/vtvl/sol_07.svg',
-    caseStudyLink: '/case-studies/vtvl/token-minting',
+    caseStudyLink:
+      'https://mikhailvillamor.webflow.io/vtvl-simplifying-transaction-history-for-better-clarity-by-mikhail-villamor-product-designer',
   },
 };
 

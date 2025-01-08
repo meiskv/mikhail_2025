@@ -8,7 +8,7 @@ export default function BrandingTypography() {
     >
       <div className="flex flex-col min-w-[546px] max-w-[746px] gap-6 md:pl-6 md:pt-6 pl-4 pt-4 pr-4">
         <div className="flex items-center space-x-2">
-          <h4 className="text-base uppercase text-[#757575]">Color Palette</h4>
+          <h4 className="text-base uppercase text-[#757575]">Typography</h4>
           <Image
             src="/title_arrow.svg"
             alt="Title arrow"

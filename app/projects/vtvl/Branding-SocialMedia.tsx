@@ -4,7 +4,7 @@ export default function BrandingSocialMedia() {
   return (
     <section
       className="drag-item flex flex-col md:flex-row md:p-0 md:rounded-lg min-w-fit md:border-0 border-b border-black py-8 rounded-none md:gap-12"
-      data-nav=""
+      data-nav="Digital"
     >
       <div className="flex flex-col min-w-[546px] max-w-[746px] gap-6 md:pl-6 md:pt-6 pl-4 pt-4 pr-4">
         <div className="flex items-center space-x-2">

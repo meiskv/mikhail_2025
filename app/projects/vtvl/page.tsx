@@ -167,7 +167,7 @@ export default function VTVL() {
             (gsap.getProperty(containerRef.current, 'x') as number) + momentum;
 
           // Constrain to bounds
-          targetX = Math.max(bounds.minX, targetX);
+          targetX = Math.max(bounds.minX, Math.min(bounds.maxX, targetX));
 
           gsap.to(containerRef.current, {
             x: targetX,
@@ -360,25 +360,20 @@ export default function VTVL() {
         {/* Updated floating navigation */}
         <div className="floating-navigation flex flex-col">
           <div className="flex gap-1 md:gap-2">
-            {[
-              'Intro',
-              'Branding',
-              'Product Design',
-              'Digital',
-              'Outro',
-              'Result',
-            ].map((label) => (
-              <button
-                key={label}
-                className="nav-button"
-                onClick={() => navigateToSection(label)}
-              >
-                <span className="initial mix-blend-difference">
-                  {label.charAt(0)}
-                </span>
-                <span className="full-text">{label}</span>
-              </button>
-            ))}
+            {['Intro', 'Product', 'Branding', 'Digital', 'Website'].map(
+              (label) => (
+                <button
+                  key={label}
+                  className="nav-button"
+                  onClick={() => navigateToSection(label)}
+                >
+                  <span className="initial mix-blend-difference">
+                    {label.charAt(0)}
+                  </span>
+                  <span className="full-text">{label}</span>
+                </button>
+              )
+            )}
           </div>
         </div>
 
@@ -398,13 +393,15 @@ export default function VTVL() {
       <div className="case-footer flex items-center text-black justify-between px-4 bg-white">
         <div className="text-sm">
           Available worldwide
-          <span className="block">Currently, based in Melbourne</span>
+          <span className="block">
+            Currently, based in <strong>Melbourne</strong>
+          </span>
         </div>
         <div className="text-center">
           → Next Project ←
           <span className="block font-bold">LYOPAY Ecosystem</span>
         </div>
-        <div className="uppercase text-sm">last update on September 2024</div>
+        <div className="uppercase text-sm">last update on JANUARY 2024</div>
       </div>
     </div>
   );
